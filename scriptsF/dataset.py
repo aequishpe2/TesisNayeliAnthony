@@ -3,7 +3,7 @@ import tweepy
 import csv
 
 # Llaves de autenticación de Twitter
-bearer_token = 'AAAAAAAAAAAAAAAAAAAAAB47xQEAAAAA8qZm7lpFRTkbPIxr2R7NI1DH2vg%3D3NjjeucE4rYdtK6QXImxS2X04i2i2RR0hqikaEQEMLsoGbWYAT'  # Reemplaza con tu token de autenticación
+bearer_token = 'FRTkbPIxr2R7NI1DH2vg%3D3NjjeucE4rYdtK6QXImxS2X04i2i2RR0hqikaEQEMLsoGbWYAT'  # Reemplaza con tu token de autenticación
 
 # Nombre del archivo CSV donde se guardarán los tweets
 output_file = 'tweets_dataset.csv'

@@ -10,10 +10,10 @@ bd = cliente.twitter
 tweets = bd.datos
 
 # Llaves de acceso para la API de Twitter
-consumer_key = 'NJYKtzK4EFc53YfEB0UEQ1ClN'
-consumer_secret = '04gLCyNvQxfZsZZemnmLOTld5TQh1Iw48Xaqpjo0xLnegRPVqZ'
-access_token = '1863449889608515584-rYzYyTjJ7CMQSB7UkxExpahwrGNCSt'
-access_secret = 'LNSF1z4v0S0laJ3lrKm25InAGw8HTOP4irn0Mt65x9rmG'
+consumer_key = 'NJYKt'
+consumer_secret = '04gLCyNvQx'
+access_token = '1863449'
+access_secret = 'LNSF'
 
 # Nombre del archivo CSV donde se guardarán los tweets
 output_file = 'tweets_dataset.csv'
