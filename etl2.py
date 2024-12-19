@@ -3,18 +3,18 @@ import re
 from nltk.corpus import stopwords
 import nltk
 
-# Ensure stopwords are downloaded
+
 nltk.download('stopwords')
 spanish_stopwords = set(stopwords.words('spanish'))
 
-# Extract: Load the CSV file
+# Cargar el archivo de comentarios
 file_path = 'C:\Tesis\data\comentarios5.csv'
 comentarios_data = pd.read_csv(file_path)
 
-# Remove rows with missing values in 'texto' (key column for analysis)
+# Eliminar filas con valores faltantes en 'texto' (columna clave para el análisis)
 comentarios_data.dropna(subset=['Texto'], inplace=True)
 
-# Clean and normalize text
+# Define a function to clean the text data
 def clean_text(text):
     text = text.lower()  # Convert to lowercase
     text = re.sub(r'\n', ' ', text)  # Remove newlines
@@ -26,7 +26,7 @@ def clean_text(text):
 
 comentarios_data['texto_limpio'] = comentarios_data['Texto'].apply(clean_text)
 
-# Define the keyword dictionary
+# Define el diccionario de categorías de ciberacoso
 cyberbullying_categories = {
     'insulto': [
         'idiota', 'estúpido', 'tonto', 'imbécil', 'estúpida', 'perdedor',
@@ -78,17 +78,17 @@ cyberbullying_categories = {
     ]
 }
 
-# Drop the 'author' column if it exists
+# Eliminar la columna 'author' si existe
 if 'author' in comentarios_data.columns:
     comentarios_data.drop(columns=['author'], inplace=True)
 
-# Add columns for each category to indicate if keywords are detected
+# Añadir columnas para cada categoría para indicar si se detectan palabras clave
 for category, keywords in cyberbullying_categories.items():
     comentarios_data[category] = comentarios_data['texto_limpio'].apply(
         lambda text: any(keyword in text for keyword in keywords)
     )
 
-# Save the transformed data to a new CSV file
+# Guardar los datos transformados en un nuevo archivo CSV
 output_path = 'C:\Tesis\dataset_transformed5.csv'
 comentarios_data.to_csv(output_path, index=False)
 
