@@ -1,4 +1,4 @@
-# README: Proceso ETL y Modelos de Machine Learning para Clasificación Multietiqueta
+# Proceso ETL y Modelos de Machine Learning para Clasificación Multietiqueta
 
 ## Descripción del Proyecto
 Este proyecto implementa un sistema para:
