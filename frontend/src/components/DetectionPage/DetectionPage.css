@@ -1,0 +1,13 @@
+.detection-page {
+  padding: 2rem;
+}
+
+.detection-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.detection-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+} 

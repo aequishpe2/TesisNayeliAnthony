@@ -1,0 +1,43 @@
+.analysis-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.analysis-form textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  resize: vertical;
+  min-height: 120px;
+}
+
+.analysis-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.analysis-form button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: var(--background-color);
+  font-weight: bold;
+}
+
+.analysis-form button:hover:not(:disabled) {
+  background-color: #4fa8c7;
+}
+
+.analysis-form button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+} 
